@@ -1,3 +1,9 @@
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} */
+
 /* Estilos para el cuerpo y el encabezado */
 body {
 	background-image: url(img/fondo-Principal.png);
@@ -9,7 +15,7 @@ body {
 }
 
 header {
-	background-color: #333;
+	background-color: #494949;
 	border-bottom: 1px solid white;
 	padding: 20px;
 	display: flex;
@@ -24,9 +30,12 @@ header {
 	margin-left: 100px;
 }
 
-
+/*hace que el elemento de navegación tome todo el espacio disponible */
 nav {
-	flex-grow: 1; /* Agrega esta propiedad para hacer que el elemento de navegación tome todo el espacio disponible */
+	margin-left: 100px;
+	margin-right: 100px;
+	display: inline-block;
+	text-align: center; 
 	}
 
 nav ul {
@@ -36,21 +45,78 @@ nav ul {
 /* 	margin: 0;
 	padding: 0; */
   }
-nav ul.iconos-redes img{
+
+/* iconos header */
+.iconos {
+	display: flex;
+	justify-content: center;
+  }
+
+.iconos-redes img {
+	width: 30px;
+	height: 30px;
+  }
+
+.iconos-redes {
+	display: flex;
+	flex-direction: row;
+  }
+  
+.iconos-redes li {
+	margin: 0 10px;
+  }
+/* div ul.iconos-redes img{
 	float: right;
 	height: 30px;
 	width: 30px;
-}
+} */
 
 nav li {
 	margin: 0 10px;
   }
   
-nav a {
-	color: white;
+/* estilo de la botonera header */
+header nav .botones a {
+	color: rgb(255, 255, 255);
 	text-decoration: none;
 	text-transform: uppercase;
+	transition: all 0.2s ease-in-out; /* animacion al sacar el mouse */
   }
+
+/* animacion en hover */
+header nav .botones a:hover {
+	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.388), rgba(38, 38, 38, 0.085));
+	color: #fffefe;
+	font-size: 20px;
+	transition: all 0.3s ease-in-out;
+  }
+
+.link{
+	text-decoration: none;
+	color: inherit;
+	padding: 10px;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.1rem;
+	position: relative;
+}
+
+.link:after {
+	content: "";
+	width: 0;
+	height: 4px;
+	background-color: aliceblue;
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	transition: all .3s;
+	will-change: width;
+}
+
+.link:hover::after{
+	width: 100%;
+	right: 0;
+}
+
 
 /* .fondo-main img{
 	position: relative;
@@ -69,8 +135,8 @@ h1 {
 }
 
 /* PAGINA CONTACTOS */
-.v5_28 {
 /* Section Numeros */
+.v5_28 {
 	box-sizing: border-box;
 	position: absolute;
 	width: 434px;
@@ -128,3 +194,17 @@ footer {
 	background-color: #333;
 	text-align: center;
 }
+
+.redes_footer {
+	display: inline-block;
+	justify-content: center;
+	
+  }
+
+
+.redes_footer a img {
+	width: 30px;
+	height: 30px;
+  }
+
+
