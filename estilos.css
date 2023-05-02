@@ -68,6 +68,55 @@ h1 {
 	color: white;
 }
 
+/* PAGINA CONTACTOS */
+.v5_28 {
+/* Section Numeros */
+	box-sizing: border-box;
+	position: absolute;
+	width: 434px;
+	height: 330px;
+  }
+
+  .v5_29 {
+	width: 434px;
+	height: 330px;
+/* 	background: rgba(41,39,121,0.4000000059604645); */
+background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
+	opacity: 1;
+	position: absolute;
+	top: 55px;
+	left: 0px;
+	border: 1px solid rgba(123,123,123,1);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+  }
+  .v5_34 {
+	width: 434px;
+	color: rgba(255,255,255,1);
+	position: absolute;
+	top: 73px;
+	left: 0px;
+	font-family: Inter;
+	font-weight: Light Italic;
+	font-size: 20px;
+	opacity: 1;
+	text-align: center;
+  }
+  .titulo_num {
+	width: 207px;
+	color: rgba(255,255,255,1);
+	position: absolute;
+	top: 0px;
+	left: 113px;
+	font-size: 36px;
+	opacity: 1;
+	text-align: center;
+  }
+
 /* Estilos para el pie de página */
 footer {
 	color: whitesmoke;
