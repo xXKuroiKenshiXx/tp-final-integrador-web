@@ -137,16 +137,25 @@ h1 {
 	color: white;
 }
 
+
+
+
+
+
 /* Estilos para el contenedor de los textos */
 .contenedor-cajas {
+	justify-content: space-around;
 	display: flex;
-	flex-direction: column;
 	padding-left: 5vh;
 	box-sizing: border-box;
+	flex-direction: row;
   }
   
+
+
+
   /* Estilos para el contenedor principal */
-.caja-trasparente1 {
+.caja-transparente1 {
 	width: 380px;
 	height: 330px;
 	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
@@ -156,8 +165,6 @@ h1 {
 	border-radius: 30px;
 	border: 0;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
   }
   
   /* Estilos para el texto dentro del contenedor */
@@ -173,7 +180,7 @@ h1 {
   
   /* Estilos para el título */
 .titulo_de_las_cajas1 {
-	
+	justify-content: space-between;
 	margin-left: 9%;
 	width: 10px;
 	color: rgba(255,255,255,1);
@@ -188,40 +195,29 @@ h1 {
 /* caja invisible 2  */
 
   /* Estilos para el contenedor principal */
-  .caja-trasnparente2{
-	display: flex;
-	width: 434px;
+  .caja-transparente2{
+	justify-content: space-between;
+	margin-left: 15%;
+	width: 380px;
 	height: 330px;
 	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
 	opacity: 1;
 	top: 55px;
-	left: 0px;
 	border: 1px solid rgba(123,123,123,1);
 	border-radius: 30px;
+	border: 0;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	overflow: hidden;
-	box-sizing: border-box;
-
   }
+  
   
   /* Estilos para el texto dentro del contenedor */
   .span-texto2 {
-	display: grid;
-	justify-content: center;
-	margin-bottom: 100px;
-	max-width: 400px;
+	display: flex;
+	margin-left: -1vh;
+	margin-top: 9vh;
+	width: 400px;
+	color:rgb(255, 255, 255);
 	text-align: center;
-	padding-bottom: 10px;
-	font-family: 'Montserrat', sans-serif; 
-	color: rgba(255,255,255,1);
-	font-size: 20px;
-	padding-inline: 1vh;
-	margin-top: -20vh;
-	opacity: 1;
-	width: 100%; /* Ocupar todo el ancho disponible */
-
-	top: 0;
-	left: 0;
   }
   
   /* Estilos para el título */
@@ -238,6 +234,141 @@ h1 {
 
 
 
+
+
+
+/* caja invisible 3  */
+
+  /* Estilos para el contenedor principal */
+  .caja-transparente3{
+	justify-content: space-between;
+	margin-left: 20%;
+	width: 380px;
+	height: 330px;
+	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
+	opacity: 1;
+	top: 55px;
+	border: 1px solid rgba(123,123,123,1);
+	border-radius: 30px;
+	border: 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  
+  /* Estilos para el texto dentro del contenedor */
+  .span-texto3 {
+	display: flex;
+	margin-left: -1vh;
+	margin-top: 9vh;
+	width: 400px;
+	color:rgb(255, 255, 255);
+	text-align: center;
+	
+  }
+  
+
+  #boton-enviar {
+	background-color: #007bff;
+	border-color: #007bff;
+	color: #fff;
+	padding: 0.5rem 1.5rem;
+	font-size: 1rem;
+	border-radius: 0.25rem;
+	transition: all 0.2s ease-in-out;
+	border-radius: 30px;
+  }
+  #boton-enviar:hover {
+	background-color: #2b95d3;
+	border-color: #5a43ac;
+	cursor: pointer;
+  }
+
+
+
+  /* Estilos para el título */
+  .titulo_de_las_cajas3{
+	-webkit-margin-top-collapse: 6vh;
+	margin-left: 20vh;
+	width: 10px;
+	color: rgba(255,255,255,1);
+	top: 0px;
+	font-size: 36px;
+	top: 0;
+	left: 0;
+  }
+
+/* Hide the default checkbox */
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+   }
+   
+   .container {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	font-size: 20px;
+	user-select: none;
+   }
+   
+   /* Create a custom checkbox */
+   .checkmark {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 1.3em;
+	width: 1.3em;
+	background-color: #ccc;
+	transition: all 0.3s;
+	border-radius: 5px;
+   }
+   
+   /* When the checkbox is checked, add a blue background */
+   .container input:checked ~ .checkmark {
+	background-color: #47da99;
+	animation: pop 0.5s;
+	animation-direction: alternate;
+   }
+   
+   /* Create the checkmark/indicator (hidden when not checked) */
+   .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+   }
+   
+   /* Show the checkmark when checked */
+   .container input:checked ~ .checkmark:after {
+	display: block;
+   }
+   
+   /* Style the checkmark/indicator */
+   .container .checkmark:after {
+	left: 0.45em;
+	top: 0.25em;
+	width: 0.25em;
+	height: 0.5em;
+	border: solid white;
+	border-width: 0 0.15em 0.15em 0;
+	transform: rotate(45deg);
+   }
+   
+   @keyframes pop {
+	0% {
+	 transform: scale(1);
+	}
+   
+	50% {
+	 transform: scale(0.9);
+	}
+   
+	100% {
+	 transform: scale(1);
+	}
+   }
 
 
 
