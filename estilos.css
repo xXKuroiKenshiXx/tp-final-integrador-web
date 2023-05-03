@@ -8,12 +8,15 @@
 body {
 	background-image: url(img/fondo-Principal.png);
 	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
-	/* min-height: 100vh; altura mínima para el cuerpo */ 
+    min-height: 100vh;
+	justify-content: space-between;
+	background-repeat: no-repeat;
 }
-
 header {
 	background: #ffb347;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
@@ -22,7 +25,9 @@ header {
 	padding: 20px;
 	display: flex;
 	align-items: center;
-	height: 60px;
+	height:	6.389776357827476vh;
+	justify-content: space-between;
+	
 }
 
 .logo img {
@@ -87,7 +92,7 @@ header nav .botones a {
 
 /* animacion en hover */
 header nav .botones a:hover {
-	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.388), rgba(38, 38, 38, 0.085));
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(38, 38, 38, 0));
 	color: #fffefe;
 	font-size: 20px;
 	transition: all 0.3s ease-in-out;
@@ -120,12 +125,6 @@ header nav .botones a:hover {
 }
 
 
-/* .fondo-main img{
-	position: relative;
-	width: 100%;
-	height: 100%;
-
-} */
 
 /* Estilos para el cuerpo principal */
 main {
@@ -139,17 +138,58 @@ h1 {
 }
 
 /* Estilos para el contenedor de los textos */
-.caja-invisible2 {
-	display: grid;
-	grid-template-rows: 1fr 1fr; 
-	justify-content: left;
-	padding: 5vh;
+.contenedor-cajas {
+	display: flex;
+	flex-direction: column;
+	padding-left: 5vh;
 	box-sizing: border-box;
   }
   
   /* Estilos para el contenedor principal */
-  .caja-invisible {
-	display: grid;
+.caja-trasparente1 {
+	width: 380px;
+	height: 330px;
+	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
+	opacity: 1;
+	top: 55px;
+	border: 1px solid rgba(123,123,123,1);
+	border-radius: 30px;
+	border: 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+  }
+  
+  /* Estilos para el texto dentro del contenedor */
+.span-texto1 {
+	display: flex;
+	margin-left: -1vh;
+	margin-top: 9vh;
+	width: 400px;
+	color:rgb(255, 255, 255);
+	text-align: center;
+	
+  }
+  
+  /* Estilos para el título */
+.titulo_de_las_cajas1 {
+	
+	margin-left: 9%;
+	width: 10px;
+	color: rgba(255,255,255,1);
+	top: 0px;
+	font-size: 36px;
+	top: 0;
+	left: 0;
+  }
+
+
+
+/* caja invisible 2  */
+
+  /* Estilos para el contenedor principal */
+  .caja-trasnparente2{
+	display: flex;
 	width: 434px;
 	height: 330px;
 	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
@@ -161,11 +201,13 @@ h1 {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
 	box-sizing: border-box;
-	position: relative; /* Necesario para que los elementos internos se posicionen correctamente */
+
   }
   
   /* Estilos para el texto dentro del contenedor */
-  .span-texto {
+  .span-texto2 {
+	display: grid;
+	justify-content: center;
 	margin-bottom: 100px;
 	max-width: 400px;
 	text-align: center;
@@ -177,14 +219,14 @@ h1 {
 	margin-top: -20vh;
 	opacity: 1;
 	width: 100%; /* Ocupar todo el ancho disponible */
-	position: relative; /* Posicionar en la esquina superior izquierda del contenedor */
+
 	top: 0;
 	left: 0;
   }
   
   /* Estilos para el título */
-  .titulo_num {
-	margin-top: 7vh;
+  .titulo_de_las_cajas2{
+	-webkit-margin-top-collapse: 6vh;
 	margin-left: 20vh;
 	width: 10px;
 	color: rgba(255,255,255,1);
@@ -194,30 +236,43 @@ h1 {
 	left: 0;
   }
 
+
+
+
+
+
 /* Estilos para el pie de página */
 footer {
+	margin-bottom: auto;
 	color: whitesmoke;
 	width: 100%;
 	clear: both;
-	height: 5vh;
+	height: 14vh;
 	position: fixed;
 	bottom: 0;
 	background: #ffb347;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #ffeaaa88, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #ffcc3352, #ffb2476e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	text-align: center;
+	margin-top: 2vh;
 }
 
-.redes_footer {
-	display: inline-block;
-	justify-content: center;
-	
-  }
+
+footer p {
+    color: #fff;
+	font-size: 1.2rem;
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	margin-bottom: -1vh;
+	padding-left: 5vh;
+}
 
 
 .redes_footer a img {
 	width: 30px;
 	height: 30px;
+	margin-top: 10px;
+	margin-bottom: -1vh;
   }
 
 
