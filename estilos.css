@@ -6,21 +6,24 @@
 
 /* Estilos para el cuerpo y el encabezado */
 body {
+	/* background-image: linear-gradient(to bottom, #27024d, #442af1); */
 	background-image: url(img/fondo-Principal.png);
+	background-attachment: fixed; /* hace que la imagen de fondo se quede fija en el scroll */
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
     min-height: 100vh;
-	justify-content: space-between;
-	background-repeat: no-repeat;
+	/* justify-content: space-between;
+	background-repeat: no-repeat; */
 }
+
 header {
-	background: #ffb347;  /* fallback for old browsers */
+	position: relative;
+	background: #ffb347;  /* fallback para navegadores antiguos */
 	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ffcc338c, #ffb247af); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	border-bottom: 1px;
 	padding: 20px;
 	display: flex;
@@ -37,11 +40,11 @@ header {
 	margin-left: 100px;
 }
 
-/*hace que el elemento de navegación tome todo el espacio disponible */
 nav {
 	margin-left: 100px;
 	margin-right: 100px;
-	display: inline-block;
+	/* display: inline-block; */
+	position: relative;
 	text-align: center; 
 	}
 
@@ -87,16 +90,14 @@ header nav .botones a {
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: all 0.2s ease-in-out; /* animacion al sacar el mouse */
   }
 
 /* animacion en hover */
-header nav .botones a:hover {
-	background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(38, 38, 38, 0));
+/* header nav .botones a:hover {
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.301), rgba(141, 139, 139, 0.495));
 	color: #fffefe;
-	font-size: 20px;
 	transition: all 0.3s ease-in-out;
-  }
+  } */
 
 .link{
 	text-decoration: none;
@@ -127,19 +128,68 @@ header nav .botones a:hover {
 
 
 /* Estilos para el cuerpo principal */
-main {
+/* main {
 	margin: 20px;
+} */
+	
+
+.container-banner {
+	position: relative;
 }
+
+.container-banner h1 {
+	position: absolute;
+	font-weight: 300;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	color: #fff;
+  }
+
+.app {
+	border-top: solid gold 5px;
+}
+.scaloneta {
+	border-bottom: solid gold 5px;
+}
+.container-banner h1 span {
+	font-family: 'Sigmar', cursive;
+	font-size: 7rem;
+	color: #fff;
+	display: block;
+	position: relative;
+	line-height: 1;
+  }
+
+/* ANIMACION TEXTO BANNER */
+.container-banner h1 span::before {
+	position: absolute;
+	content: var(--content);
+	background: linear-gradient(90deg,cyan,white,rgba(246, 238, 6, 0.444),white,cyan);
+	inset: 0;
+	background-clip: unset;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+.container-banner img {
+	width: 100%;
+	height: 89vh;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5); /* fondo negro semitransparente */
+  }
 
 h1 {
 	text-align: center;
 	font-family: 'Montserrat', sans-serif; 
 	color: white;
 }
-
-
-
-
 
 
 /* Estilos para el contenedor de los textos */
@@ -195,7 +245,7 @@ h1 {
 /* caja invisible 2  */
 
   /* Estilos para el contenedor principal */
-  .caja-transparente2{
+.caja-transparente2{
 	justify-content: space-between;
 	margin-left: 15%;
 	width: 380px;
@@ -211,7 +261,7 @@ h1 {
   
   
   /* Estilos para el texto dentro del contenedor */
-  .span-texto2 {
+.span-texto2 {
 	display: flex;
 	margin-left: -1vh;
 	margin-top: 9vh;
@@ -221,7 +271,7 @@ h1 {
   }
   
   /* Estilos para el título */
-  .titulo_de_las_cajas2{
+.titulo_de_las_cajas2{
 	-webkit-margin-top-collapse: 6vh;
 	margin-left: 20vh;
 	width: 10px;
@@ -232,15 +282,10 @@ h1 {
 	left: 0;
   }
 
-
-
-
-
-
 /* caja invisible 3  */
 
   /* Estilos para el contenedor principal */
-  .caja-transparente3{
+.caja-transparente3{
 	justify-content: space-between;
 	margin-left: 20%;
 	width: 380px;
@@ -256,7 +301,7 @@ h1 {
   
   
   /* Estilos para el texto dentro del contenedor */
-  .span-texto3 {
+.span-texto3 {
 	display: flex;
 	margin-left: -1vh;
 	margin-top: 9vh;
@@ -267,7 +312,7 @@ h1 {
   }
   
 
-  #boton-enviar {
+#boton-enviar {
 	background-color: #007bff;
 	border-color: #007bff;
 	color: #fff;
@@ -379,16 +424,18 @@ footer {
 	width: 100%;
 	clear: both;
 	height: 14vh;
-	position: fixed;
+	position: relative;
 	bottom: 0;
 	background: #ffb347;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffeaaa88, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ffcc3352, #ffb2476e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	text-align: center;
 	margin-top: 2vh;
 }
 
-
+p{
+	color: #fff;
+}
 footer p {
     color: #fff;
 	font-size: 1.2rem;
