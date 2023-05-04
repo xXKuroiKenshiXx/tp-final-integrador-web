@@ -20,8 +20,7 @@ body {
 header {
 	background: #ffb347;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ffcc338c, #ffb247af); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
-	border-bottom: 1px;
+	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	padding: 20px;
 	display: flex;
 	align-items: center;
@@ -39,10 +38,8 @@ header {
 
 /*hace que el elemento de navegación tome todo el espacio disponible */
 nav {
-	margin-left: 100px;
-	margin-right: 100px;
 	display: inline-block;
-	text-align: center; 
+	text-align: center;
 	}
 
 nav ul {
@@ -55,9 +52,10 @@ nav ul {
 
 /* iconos header */
 .iconos {
-	display: flex;
-	justify-content: center;
-  }
+	float: left;
+	width: auto;
+	margin-right: 10px;
+}
 
 .iconos-redes img {
 	width: 30px;
@@ -94,7 +92,6 @@ header nav .botones a {
 header nav .botones a:hover {
 	background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(38, 38, 38, 0));
 	color: #fffefe;
-	font-size: 20px;
 	transition: all 0.3s ease-in-out;
   }
 
@@ -130,7 +127,7 @@ header nav .botones a:hover {
 /* main {
 	margin: 20px;
 }
-* Estilos para el cuerpo principal */ */
+* Estilos para el cuerpo principal */
 /* main {
 	margin: 20px;
 } */
@@ -179,6 +176,16 @@ header nav .botones a:hover {
 	width: 100%;
 	height: 89vh;
 }
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4); /* fondo negro semitransparente */
+  }
+
 
 h1 {
 	text-align: center;
@@ -312,7 +319,7 @@ h1 {
 .span-texto3 {
 	display: flex;
 	text-align: center;
-	margin-left: -1vh;
+	margin-left: 3vh;
 	margin-top: 9vh;
 	width: 400px;
 	color:rgb(255, 255, 255);
@@ -337,8 +344,8 @@ h1 {
 
   #boton-enviar {
 	margin-left: 14vh;
-	background-color: #007bff;
-	border-color: #007bff;
+	background-color: #0b50d1;
+	border-color: #0c335c78;
 	color: #fff;
 	padding: 0.5rem 1.5rem;
 	font-size: 1rem;
@@ -347,8 +354,8 @@ h1 {
 	border-radius: 30px;
   }
   #boton-enviar:hover {
-	background-color: #2b95d3;
-	border-color: #5a43ac;
+	background-color: #2a9cff;
+	border-color: #25194e89;
 	cursor: pointer;
   }
 
@@ -390,6 +397,7 @@ h1 {
 }
   
 .checkmark {
+	margin-left: 1vh;
 	margin-right: 1vh;
 	position: relative;
 	top: 0;
@@ -430,20 +438,20 @@ h1 {
 	border-width: 0 0.15em 0.15em 0;
 	transform: rotate(45deg);
    }
-   
-   @keyframes pop {
+
+@keyframes pop {
 	0% {
 	 transform: scale(1);
 	}
-   
+
 	50% {
 	 transform: scale(0.9);
 	}
-   
+
 	100% {
 	 transform: scale(1);
 	}
-   }
+	}
 
 
 
@@ -451,13 +459,13 @@ h1 {
 footer {
 	color: whitesmoke;
 	width: 100%;
-	position: absolute;
+	position: relative;
     margin-bottom: 0px;
 	height: 14vh;
 	bottom: 0;
 	background: #ffb347;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffeaaa88, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ffcc3352, #ffb2476e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	text-align: center;
 
 
