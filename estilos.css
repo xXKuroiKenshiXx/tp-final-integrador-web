@@ -459,16 +459,25 @@ h1 {
 footer {
 	color: whitesmoke;
 	width: 100%;
-	position: relative;
-    margin-bottom: 0px;
-	height: 14vh;
+	position: absolute;
 	bottom: 0;
+	height: 14vh;
 	background: #ffb347;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: -webkit-linear-gradient(to right, #ffeaaa88, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ffcc3352, #ffb247bb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	text-align: center;
+}
 
-
+.footer-index{
+	color: whitesmoke;
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	height: 14vh;
+	background: #ffb347;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ffeaaa88, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ffcc3352, #ffb247bb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	text-align: center;
 }
 
 p{
@@ -491,5 +500,6 @@ footer p {
 	margin-top: 10px;
 	margin-bottom: -1vh;
   }
+
 
 
