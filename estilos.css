@@ -208,16 +208,24 @@ h1 {
   }
   
 /* Estilos para el contenedor de los textos */
-  .all_titulos_de_las_cajas {
+.all_titulos_de_las_cajas {
 	align-items: center;
 	display: flex;
     flex-direction: row;
 	margin-left: 12%;
     margin-right: 12%;
     justify-content: space-between;
-
-
 }
+
+.span-texto1, .span-texto2, .span-texto3 {
+    display: flex;
+    padding-left: 0.2vh;
+    margin-top: 9vh;
+    width: 400px;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
 /*------------------------------------------------ */
 /*------------------------------------------------ */
 /*------------------------------------------------ */
@@ -239,17 +247,7 @@ h1 {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   
-  /* Estilos para el texto dentro del contenedor */
-.span-texto1 {
-	display: flex;
-	margin-left: -1vh;
-	margin-top: 9vh;
-	width: 400px;
-	color:rgb(255, 255, 255);
-	text-align: center;
-	
-  }
-  
+
   /* Estilos para el título */
 .titulo_de_las_cajas1 {
 	justify-content: space-between;
@@ -275,16 +273,7 @@ h1 {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   
-  
-  /* Estilos para el texto dentro del contenedor */
-.span-texto2 {
-	display: flex;
-	margin-left: -1vh;
-	margin-top: 9vh;
-	width: 400px;
-	color:rgb(255, 255, 255);
-	text-align: center;
-  }
+
   
   /* Estilos para el título */
 .titulo_de_las_cajas2{
@@ -315,22 +304,11 @@ h1 {
   }
   
   
-  /* Estilos para el texto dentro del contenedor */
-.span-texto3 {
-	display: flex;
-	text-align: center;
-	margin-left: 3vh;
-	margin-top: 9vh;
-	width: 400px;
-	color:rgb(255, 255, 255);
-	
-	
-	}
-  
 
 
   /* Estilos para el título */
   .titulo_de_las_cajas3{
+	margin-left: -10vh;
 	color: rgba(255,255,255,1);
 	top: 0px;
 	font-size: 36px;
