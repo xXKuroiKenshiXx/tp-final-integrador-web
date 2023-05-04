@@ -6,7 +6,7 @@
 
 /* Estilos para el cuerpo y el encabezado */
 body {
-	background-image: url(/img/fondo-Principal.png);
+	background: url(../img/fondo-Principal.png);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -17,6 +17,8 @@ body {
 	justify-content: space-between;
 	background-repeat: no-repeat;
 }
+
+
 header {
 	background: #ffb347;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
