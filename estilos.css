@@ -6,24 +6,21 @@
 
 /* Estilos para el cuerpo y el encabezado */
 body {
-	/* background-image: linear-gradient(to bottom, #27024d, #442af1); */
 	background-image: url(img/fondo-Principal.png);
-	background-attachment: fixed; /* hace que la imagen de fondo se quede fija en el scroll */
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
     min-height: 100vh;
-	/* justify-content: space-between;
-	background-repeat: no-repeat; */
+	justify-content: space-between;
+	background-repeat: no-repeat;
 }
-
 header {
-	position: relative;
-	background: #ffb347;  /* fallback para navegadores antiguos */
+	background: #ffb347;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	background: linear-gradient(to right, #ffcc338c, #ffb247af); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	border-bottom: 1px;
 	padding: 20px;
 	display: flex;
@@ -40,11 +37,11 @@ header {
 	margin-left: 100px;
 }
 
+/*hace que el elemento de navegación tome todo el espacio disponible */
 nav {
 	margin-left: 100px;
 	margin-right: 100px;
-	/* display: inline-block; */
-	position: relative;
+	display: inline-block;
 	text-align: center; 
 	}
 
@@ -90,14 +87,16 @@ header nav .botones a {
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	text-transform: uppercase;
+	transition: all 0.2s ease-in-out; /* animacion al sacar el mouse */
   }
 
 /* animacion en hover */
-/* header nav .botones a:hover {
-	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.301), rgba(141, 139, 139, 0.495));
+header nav .botones a:hover {
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(38, 38, 38, 0));
 	color: #fffefe;
+	font-size: 20px;
 	transition: all 0.3s ease-in-out;
-  } */
+  }
 
 .link{
 	text-decoration: none;
@@ -128,6 +127,10 @@ header nav .botones a {
 
 
 /* Estilos para el cuerpo principal */
+/* main {
+	margin: 20px;
+}
+* Estilos para el cuerpo principal */ */
 /* main {
 	margin: 20px;
 } */
@@ -176,14 +179,6 @@ header nav .botones a {
 	width: 100%;
 	height: 89vh;
 }
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.5); /* fondo negro semitransparente */
-  }
 
 h1 {
 	text-align: center;
@@ -192,22 +187,42 @@ h1 {
 }
 
 
-/* Estilos para el contenedor de los textos */
+
+/*------------------------------------------------ */
+/*------------------------------------------------ */
+/*------------------------------------------------ */
+/* Estilos para el contenedor de las cajas transparentes */
 .contenedor-cajas {
-	justify-content: space-around;
 	display: flex;
-	padding-left: 5vh;
+	justify-content: space-around;
+	align-items: center;
 	box-sizing: border-box;
 	flex-direction: row;
   }
   
+/* Estilos para el contenedor de los textos */
+  .all_titulos_de_las_cajas {
+	align-items: center;
+	display: flex;
+    flex-direction: row;
+	margin-left: 12%;
+    margin-right: 12%;
+    justify-content: space-between;
+
+
+}
+/*------------------------------------------------ */
+/*------------------------------------------------ */
+/*------------------------------------------------ */
+
+
 
 
 
   /* Estilos para el contenedor principal */
 .caja-transparente1 {
-	width: 380px;
-	height: 330px;
+	height: 340px;
+	width:	400px;
 	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
 	opacity: 1;
 	top: 55px;
@@ -231,25 +246,19 @@ h1 {
   /* Estilos para el título */
 .titulo_de_las_cajas1 {
 	justify-content: space-between;
-	margin-left: 9%;
-	width: 10px;
 	color: rgba(255,255,255,1);
-	top: 0px;
 	font-size: 36px;
-	top: 0;
-	left: 0;
   }
 
 
 
-/* caja invisible 2  */
 
-  /* Estilos para el contenedor principal */
+
+/* Estilos para el contenedor principal */
 .caja-transparente2{
+	height: 340px;
+	width:	400px;
 	justify-content: space-between;
-	margin-left: 15%;
-	width: 380px;
-	height: 330px;
 	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
 	opacity: 1;
 	top: 55px;
@@ -272,24 +281,23 @@ h1 {
   
   /* Estilos para el título */
 .titulo_de_las_cajas2{
-	-webkit-margin-top-collapse: 6vh;
-	margin-left: 20vh;
-	width: 10px;
 	color: rgba(255,255,255,1);
-	top: 0px;
 	font-size: 36px;
-	top: 0;
-	left: 0;
+	padding-left: 1vh;
   }
+
+
+
+
+
 
 /* caja invisible 3  */
 
   /* Estilos para el contenedor principal */
 .caja-transparente3{
+	height: 340px ;
+	width:	400px;
 	justify-content: space-between;
-	margin-left: 20%;
-	width: 380px;
-	height: 330px;
 	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
 	opacity: 1;
 	top: 55px;
@@ -303,16 +311,32 @@ h1 {
   /* Estilos para el texto dentro del contenedor */
 .span-texto3 {
 	display: flex;
+	text-align: center;
 	margin-left: -1vh;
 	margin-top: 9vh;
 	width: 400px;
 	color:rgb(255, 255, 255);
-	text-align: center;
 	
-  }
+	
+	}
   
 
-#boton-enviar {
+
+  /* Estilos para el título */
+  .titulo_de_las_cajas3{
+	color: rgba(255,255,255,1);
+	top: 0px;
+	font-size: 36px;
+	top: 0;
+	left: 0;
+	
+  }
+
+
+/* Estilos para el boton */
+
+  #boton-enviar {
+	margin-left: 14vh;
 	background-color: #007bff;
 	border-color: #007bff;
 	color: #fff;
@@ -328,22 +352,20 @@ h1 {
 	cursor: pointer;
   }
 
+  /* Estilos email */
+.email-input{
+	margin-left: 8vh;
+	margin-right: 7vh;
+	margin-top: 3vh;
+	padding: 4px;
+	border-radius: 10px;
+	border: 0;
+
+}
 
 
-  /* Estilos para el título */
-  .titulo_de_las_cajas3{
-	-webkit-margin-top-collapse: 6vh;
-	margin-left: 20vh;
-	width: 10px;
-	color: rgba(255,255,255,1);
-	top: 0px;
-	font-size: 36px;
-	top: 0;
-	left: 0;
-  }
-
-/* Hide the default checkbox */
 .container input {
+	padding: 100px;
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
@@ -351,16 +373,24 @@ h1 {
 	width: 0;
    }
    
-   .container {
-	display: block;
+.container {
+	padding-left: 2vh;
+	padding-right: 2vh;
+	display: flex;
 	position: relative;
 	cursor: pointer;
 	font-size: 20px;
 	user-select: none;
+	text-align: center;
+	align-items: center;
    }
-   
-   /* Create a custom checkbox */
-   .checkmark {
+
+.container > p {
+	font-size: 17px;
+}
+  
+.checkmark {
+	margin-right: 1vh;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -372,26 +402,26 @@ h1 {
    }
    
    /* When the checkbox is checked, add a blue background */
-   .container input:checked ~ .checkmark {
+.container input:checked ~ .checkmark {
 	background-color: #47da99;
 	animation: pop 0.5s;
 	animation-direction: alternate;
    }
    
    /* Create the checkmark/indicator (hidden when not checked) */
-   .checkmark:after {
+.checkmark:after {
 	content: "";
 	position: absolute;
 	display: none;
    }
    
    /* Show the checkmark when checked */
-   .container input:checked ~ .checkmark:after {
+.container input:checked ~ .checkmark:after {
 	display: block;
    }
    
    /* Style the checkmark/indicator */
-   .container .checkmark:after {
+.container .checkmark:after {
 	left: 0.45em;
 	top: 0.25em;
 	width: 0.25em;
@@ -419,23 +449,24 @@ h1 {
 
 /* Estilos para el pie de página */
 footer {
-	margin-bottom: auto;
 	color: whitesmoke;
 	width: 100%;
-	clear: both;
+	position: absolute;
+    margin-bottom: 0px;
 	height: 14vh;
-	position: relative;
 	bottom: 0;
 	background: #ffb347;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	background: -webkit-linear-gradient(to right, #ffeaaa88, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ffcc3352, #ffb2476e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	text-align: center;
-	margin-top: 2vh;
+
+
 }
 
 p{
 	color: #fff;
 }
+
 footer p {
     color: #fff;
 	font-size: 1.2rem;
