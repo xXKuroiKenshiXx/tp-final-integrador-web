@@ -1,2 +1,9 @@
 Beceiro Lucas
 Segal David
+
+el github https://github.com/xXKuroiKenshiXx/tp-final-integrador-web
+
+el github page:https://xxkuroikenshixx.github.io/tp-final-integrador-web/
+
+
+//// vale aclarar que las img y el css tiene modificada la ruta para que lo detecte bien el github page /////

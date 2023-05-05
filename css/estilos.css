@@ -19,7 +19,7 @@ html {
 /* Estilos para el cuerpo y el encabezado */
 body {
 	backdrop-filter: blur(15px);
-	background: url(/img/fondo-Principal.png);
+	background: url(../img/fondo-Principal.png);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
