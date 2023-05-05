@@ -3,9 +3,22 @@
 	padding: 0;
 	box-sizing: border-box;
 } */
+.messi {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+.messi img{
+	height: 600px;
+}
 
+html {
+	scroll-behavior: smooth;
+  }
 /* Estilos para el cuerpo y el encabezado */
 body {
+	backdrop-filter: blur(15px);
 	background: url(/img/fondo-Principal.png);
 	background-size: cover;
 	background-position: center;
@@ -72,11 +85,7 @@ nav ul {
 .iconos-redes li {
 	margin: 0 10px;
   }
-/* div ul.iconos-redes img{
-	float: right;
-	height: 30px;
-	width: 30px;
-} */
+
 
 nav li {
 	margin: 0 10px;
@@ -85,17 +94,9 @@ nav li {
 /* estilo de la botonera header */
 header nav .botones a {
 	color: rgb(255, 255, 255);
-	text-decoration: none;
 	text-transform: uppercase;
-	transition: all 0.2s ease-in-out; /* animacion al sacar el mouse */
   }
 
-/* animacion en hover */
-header nav .botones a:hover {
-	background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(38, 38, 38, 0));
-	color: #fffefe;
-	transition: all 0.3s ease-in-out;
-  }
 
 .link{
 	text-decoration: none;
@@ -123,18 +124,6 @@ header nav .botones a:hover {
 	right: 0;
 }
 
-
-
-/* Estilos para el cuerpo principal */
-/* main {
-	margin: 20px;
-}
-* Estilos para el cuerpo principal */
-/* main {
-	margin: 20px;
-} */
-	
-
 .container-banner {
 	position: relative;
 }
@@ -149,12 +138,14 @@ header nav .botones a:hover {
 	color: #fff;
   }
 
-.app {
-	border-top: solid gold 5px;
+h1.texto-grande{
+	border-top: solid gold 6px;
+	border-bottom: solid gold 6px;
+	background-color: rgba(0, 0, 0, 0.332);
+	border-radius: 5px;
+	background: linear-gradient(90deg,rgba(19, 19, 19, 0.079),#00000048,rgba(0, 0, 0, 0.079));
 }
-.scaloneta {
-	border-bottom: solid gold 5px;
-}
+
 .container-banner h1 span {
 	font-family: 'Sigmar', cursive;
 	font-size: 7rem;
@@ -164,16 +155,17 @@ header nav .botones a:hover {
 	line-height: 1;
   }
 
-/* ANIMACION TEXTO BANNER */
+/*TEXTO BANNER */
 .container-banner h1 span::before {
 	position: absolute;
 	content: var(--content);
-	background: linear-gradient(90deg,cyan,white,rgba(246, 238, 6, 0.444),white,cyan);
+	background: linear-gradient(90deg,rgb(0, 221, 255),white,rgba(255, 222, 6, 0.648),white,rgb(0, 221, 255));
 	inset: 0;
 	background-clip: unset;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
   }
+
 .container-banner img {
 	width: 100%;
 	height: 89vh;
@@ -185,7 +177,7 @@ header nav .botones a:hover {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.4); /* fondo negro semitransparente */
+	background-color: rgba(0,0,0,0.5); /* fondo negro semitransparente */
   }
 
 
@@ -195,6 +187,63 @@ h1 {
 	color: white;
 }
 
+.titulo-contactos {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif; 
+	color: white;
+	font-size: 10;
+}
+.p-index-html {
+    display: flex;
+    max-width: 1000px;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.7rem;
+    margin-left: 20%;
+    margin-right: 20%;
+	margin-top: 10vh;
+	line-height: 1.4;
+
+	
+}
+
+#pelota3 {
+
+    position: absolute;
+    left: 85%;
+    right: 0;
+    justify-items: center;
+    animation: rebota3 1s alternate infinite ease-out;
+}
+@keyframes rebota3 {
+    0% {
+      bottom: 100%;
+      height: 70px;
+    }
+    100% {
+      bottom: 600px;
+
+    }
+  }
+
+#pelota4{
+    position: absolute;
+    left: 10%;
+    right: 0;
+    justify-items: center;
+    animation: rebota 0.8s alternate infinite ease-out;
+  }
+    @keyframes rebota {
+        0% {
+        bottom: 100%;
+        height: 70px;
+        }
+        100% {
+        bottom: 600px;
+        }
+    }
 
 
 /*------------------------------------------------ */
@@ -219,13 +268,29 @@ h1 {
     justify-content: space-between;
 }
 
-.span-texto1, .span-texto2, .span-texto3 {
+.span-texto1, .span-texto2 {
+	font-weight: bolder;
+	line-height: 1.6;
+	font-size: 18px;
     display: flex;
     padding-left: 0.2vh;
     margin-top: 9vh;
     width: 400px;
     color:rgb(255, 255, 255);
     text-align: center;
+	justify-content: center;
+}
+.span-texto3 {
+	font-weight: bolder;
+	line-height: 1.6;
+	font-size: 18px;
+    display: flex;
+    padding-left: 0.2vh;
+    margin-top: 6vh;
+    width: 400px;
+    color:rgb(255, 255, 255);
+    text-align: center;
+	justify-content: center;
 }
 
 /*------------------------------------------------ */
@@ -293,12 +358,13 @@ h1 {
 
   /* Estilos para el contenedor principal */
 .caja-transparente3{
+	position: relative;
 	height: 340px ;
 	width:	400px;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
 	opacity: 1;
-	top: 55px;
+	/* top: 55px; */
 	border: 1px solid rgba(123,123,123,1);
 	border-radius: 30px;
 	border: 0;
@@ -310,7 +376,7 @@ h1 {
 
   /* Estilos para el título */
   .titulo_de_las_cajas3{
-	margin-left: -10vh;
+	/* margin-left: -10vh; */
 	color: rgba(255,255,255,1);
 	top: 0px;
 	font-size: 36px;
@@ -322,8 +388,8 @@ h1 {
 
 /* Estilos para el boton */
 
-  #boton-enviar {
-	margin-left: 14vh;
+#boton-enviar {
+	margin-left: 16vh;
 	background-color: #0b50d1;
 	border-color: #0c335c78;
 	color: #fff;
@@ -332,8 +398,9 @@ h1 {
 	border-radius: 0.25rem;
 	transition: all 0.2s ease-in-out;
 	border-radius: 30px;
+	
   }
-  #boton-enviar:hover {
+#boton-enviar:hover {
 	background-color: #2a9cff;
 	border-color: #25194e89;
 	cursor: pointer;
@@ -341,8 +408,10 @@ h1 {
 
   /* Estilos email */
 .email-input{
-	margin-left: 8vh;
-	margin-right: 7vh;
+	height: 2vh;
+	width: 30vh;
+	margin-left: 6vh;
+	margin-right: 5vh;
 	margin-top: 3vh;
 	padding: 4px;
 	border-radius: 10px;
@@ -388,7 +457,7 @@ h1 {
 	transition: all 0.3s;
 	border-radius: 5px;
    }
-   
+
    /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
 	background-color: #47da99;
@@ -433,9 +502,88 @@ h1 {
 	}
 	}
 
+/*--------- PAGINA INSTITUCIONAL----------- */
+.container-institucional{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+.institucional-banner img{
+	width: 135vh;
+	height: 400px;
+}
+
+.institucional-banner{
+	position: relative;;
+}
+
+/* .container-institucional h1{
+	position: absolute;
+	font-family: 'sigmar', cursive;
+	font-weight: 600;
+	font-size: 45px;
+	top: 50%;
+	left: 25%;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.454);
+ 	color: #fff;
+	border: solid grey 2px;
+	border-radius: 5px;
+	} */
+
+.overlay-institucional {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*background-color: rgba(0,0,0,0.4);  fondo negro semitransparente */
+  }
+.contenido-texto {
+	background-color: rgba(110, 103, 116, 0.64);
+	border-bottom:solid grey 5px;
+	border-top:solid grey 5px;
+	max-width: 130.5vh;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 5px;
+}
+.comite h2{
+	font-family: 'sigmar', cursive;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+}
+
+.comite ul, .comite li{
+	padding-right: 40px;
+	padding-left: 40px;
+	font-family: sans-serif;
+	font-size: 20px;
+	color: white;
+	line-height: 1.7;
+
+}
+.contenido-texto h2 {
+	font-family: 'sigmar', cursive;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+
+}
+.contenido-texto p {
+	padding-right: 40px;
+	padding-left: 40px;
+	font-family: sans-serif;
+	font-size: 20px;
+	color: white;
+}
 
 
-/* Estilos para el pie de página */
+/* -----------------Estilos para el pie de página--------------------- */
 footer {
 	color: whitesmoke;
 	width: 100%;
@@ -443,12 +591,12 @@ footer {
 	bottom: 0;
 	height: 14vh;
 	background: #ffb347;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffeaaa88, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ffcc3352, #ffb247bb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	text-align: center;
 }
 
-.footer-index{
+.footer-contenido{
 	margin-top: 100px;
 	color: whitesmoke;
 	width: 100%;
@@ -456,8 +604,8 @@ footer {
 	bottom: 0;
 	height: 14vh;
 	background: #ffb347;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffeaaa88, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ffcc3352, #ffb247bb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	text-align: center;
 }
 
