@@ -1,0 +1,52 @@
+{
+    "jugadores": [
+        {
+            "documento": "12345678",
+            "nombre": "Lionel",
+            "apellido": "Messi",
+            "posicion": "delantero",
+            "dorsal": 10,
+            "pie": "zurdo"
+        },
+        {
+            "documento": "13345674",
+            "nombre": "Paulo",
+            "apellido": "Dybala",
+            "posicion": "delantero",
+            "dorsal": 21,
+            "pie": "zurdo"
+        },
+        {
+            "documento": "23456789",
+            "nombre": "Julian",
+            "apellido": "Alvarez",
+            "posicion": "delantero",
+            "dorsal": 9,
+            "pie": "derecho"
+        },
+        {
+            "documento": "34567890",
+            "nombre": "Lautaro",
+            "apellido": "Martinez",
+            "posicion": "delantero",
+            "dorsal": 22,
+            "pie": "derecho"
+        },
+        {
+            "documento": "45678901",
+            "nombre": "Angel",
+            "apellido": "Di María",
+            "posicion": "medio campista",
+            "dorsal": 11,
+            "pie": "zurdo"
+        },
+        {
+            "documento": "56789012",
+            "nombre": "Emiliano",
+            "apellido": "Martínez",
+            "posicion": "arquero",
+            "dorsal": 23,
+            "pie": "derecho"
+        }
+    ]
+}

@@ -1,25 +1,8 @@
-/* * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-} */
-.messi {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	
-}
-.messi img{
-	height: 600px;
-}
 
-html {
-	scroll-behavior: smooth;
-  }
 /* Estilos para el cuerpo y el encabezado */
 body {
 	backdrop-filter: blur(15px);
-	background: url(/img/fondo-Principal.png);
+	background: url(../img/fondo-Principal.png);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -27,21 +10,21 @@ body {
 	padding: 0;
 	font-family: Arial, sans-serif;
     min-height: 100vh;
-	justify-content: space-between;
+
 	background-repeat: no-repeat;
+	
 }
 
 
 header {
-	background: #ffb347;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
-	padding: 20px;
+	background: #44A08D;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	padding: 1%;
 	display: flex;
 	align-items: center;
 	height:	6.389776357827476vh;
 	justify-content: space-between;
-	
 }
 
 .logo img {
@@ -61,9 +44,8 @@ nav ul {
 	display: flex;
 	justify-content: center; /* centra los botones en el nav */
 	list-style: none;
-/* 	margin: 0;
-	padding: 0; */
   }
+
 
 /* iconos header */
 .iconos {
@@ -177,7 +159,7 @@ h1.texto-grande{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.5); /* fondo negro semitransparente */
+	background-color: rgba(0,0,0,0.3); /* fondo negro semitransparente */
   }
 
 
@@ -193,23 +175,9 @@ h1 {
 	color: white;
 	font-size: 10;
 }
-.p-index-html {
-    display: flex;
-    max-width: 1000px;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-between;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.7rem;
-    margin-left: 20%;
-    margin-right: 20%;
-	margin-top: 10vh;
-	line-height: 1.4;
 
-	
-}
 
-#pelota3 {
+#pelota1 {
 
     position: absolute;
     left: 85%;
@@ -228,7 +196,7 @@ h1 {
     }
   }
 
-#pelota4{
+#pelota2{
     position: absolute;
     left: 10%;
     right: 0;
@@ -253,22 +221,21 @@ h1 {
 .contenedor-cajas {
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
 	box-sizing: border-box;
 	flex-direction: row;
   }
   
 /* Estilos para el contenedor de los textos */
-.all_titulos_de_las_cajas {
-	align-items: center;
+.contenedor-titulos{
 	display: flex;
     flex-direction: row;
-	margin-left: 12%;
-    margin-right: 12%;
-    justify-content: space-between;
-}
+	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
+  }
+  
 
-.span-texto1, .span-texto2 {
+.span-texto{
 	font-weight: bolder;
 	line-height: 1.6;
 	font-size: 18px;
@@ -280,29 +247,8 @@ h1 {
     text-align: center;
 	justify-content: center;
 }
-.span-texto3 {
-	font-weight: bolder;
-	line-height: 1.6;
-	font-size: 18px;
-    display: flex;
-    padding-left: 0.2vh;
-    margin-top: 6vh;
-    width: 400px;
-    color:rgb(255, 255, 255);
-    text-align: center;
-	justify-content: center;
-}
 
-/*------------------------------------------------ */
-/*------------------------------------------------ */
-/*------------------------------------------------ */
-
-
-
-
-
-  /* Estilos para el contenedor principal */
-.caja-transparente1 {
+.caja-transparente {
 	height: 340px;
 	width:	400px;
 	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
@@ -313,81 +259,25 @@ h1 {
 	border: 0;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  
 
-  /* Estilos para el título */
-.titulo_de_las_cajas1 {
+    /* Estilos para el título */
+.titulo_de_las_cajas {
 	justify-content: space-between;
 	color: rgba(255,255,255,1);
-	font-size: 36px;
-  }
-
-
-
-
-
-/* Estilos para el contenedor principal */
-.caja-transparente2{
-	height: 340px;
-	width:	400px;
-	justify-content: space-between;
-	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
-	opacity: 1;
-	top: 55px;
-	border: 1px solid rgba(123,123,123,1);
-	border-radius: 30px;
-	border: 0;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-
-  
-  /* Estilos para el título */
-.titulo_de_las_cajas2{
-	color: rgba(255,255,255,1);
-	font-size: 36px;
-	padding-left: 1vh;
-  }
-
-
-
-
-
-
-/* caja invisible 3  */
-
-  /* Estilos para el contenedor principal */
-.caja-transparente3{
-	position: relative;
-	height: 340px ;
-	width:	400px;
-	/* justify-content: space-between; */
-	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
-	opacity: 1;
-	/* top: 55px; */
-	border: 1px solid rgba(123,123,123,1);
-	border-radius: 30px;
-	border: 0;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  
-
-
-  /* Estilos para el título */
-  .titulo_de_las_cajas3{
-	/* margin-left: -10vh; */
-	color: rgba(255,255,255,1);
-	top: 0px;
 	font-size: 36px;
 	top: 0;
 	left: 0;
-	
   }
+
+/*------------------------------------------------ */
+/*------------------------------------------------ */
+/*------------------------------------------------ */
+
+
+
 
 
 /* Estilos para el boton */
-
 #boton-enviar {
 	margin-left: 16vh;
 	background-color: #0b50d1;
@@ -418,7 +308,6 @@ h1 {
 	border: 0;
 
 }
-
 
 .container input {
 	padding: 100px;
@@ -458,26 +347,26 @@ h1 {
 	border-radius: 5px;
    }
 
-   /* When the checkbox is checked, add a blue background */
+   /* cuando el checkbox está seleccionado, añade un fondo azul*/
 .container input:checked ~ .checkmark {
 	background-color: #47da99;
 	animation: pop 0.5s;
 	animation-direction: alternate;
    }
    
-   /* Create the checkmark/indicator (hidden when not checked) */
+   /* Crea la marca de verificación / indicador (oculto cuando no está marcado) */
 .checkmark:after {
 	content: "";
 	position: absolute;
 	display: none;
    }
    
-   /* Show the checkmark when checked */
+   /* "Muestra la marca de verificación cuando está marcado" */
 .container input:checked ~ .checkmark:after {
 	display: block;
    }
    
-   /* Style the checkmark/indicator */
+   /* "Estilo de la marca de verificación / indicador" */
 .container .checkmark:after {
 	left: 0.45em;
 	top: 0.25em;
@@ -520,20 +409,6 @@ h1 {
 	position: relative;;
 }
 
-/* .container-institucional h1{
-	position: absolute;
-	font-family: 'sigmar', cursive;
-	font-weight: 600;
-	font-size: 45px;
-	top: 50%;
-	left: 25%;
-	z-index: 1;
-	background-color: rgba(0, 0, 0, 0.454);
- 	color: #fff;
-	border: solid grey 2px;
-	border-radius: 5px;
-	} */
-
 .overlay-institucional {
 	position: absolute;
 	top: 0;
@@ -550,6 +425,7 @@ h1 {
 	margin: 0 auto;
 	padding: 20px;
 	border-radius: 5px;
+	margin-bottom: 3%;
 }
 .comite h2{
 	font-family: 'sigmar', cursive;
@@ -582,6 +458,18 @@ h1 {
 	color: white;
 }
 
+.messi {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+	
+}
+.messi img{
+	height: 600px;
+	border-radius: 30px;
+}
+
 
 /* -----------------Estilos para el pie de página--------------------- */
 footer {
@@ -590,23 +478,29 @@ footer {
 	position: absolute;
 	bottom: 0;
 	height: 14vh;
-	background: #ffb347;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	background: #44A08D;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	text-align: center;
 }
 
 .footer-contenido{
-	margin-top: 100px;
-	color: whitesmoke;
-	width: 100%;
 	position: relative;
-	bottom: 0;
-	height: 14vh;
-	background: #ffb347;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #efa032d2, #e6b521cf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
-	text-align: center;
+}
+
+
+
+.p-index-html {
+	display: flex;
+   	flex-direction: column;
+   	text-align: center;
+   	justify-content: space-between;
+   	font-family: 'Times New Roman', Times, serif;
+   	font-size: 1.7rem;
+   	margin-left: 20%;
+   	margin-right: 20%;
+   	margin-top: 10vh;
+   	line-height: 1.4;
 }
 
 p{
@@ -624,11 +518,15 @@ footer p {
 
 
 .redes_footer a img {
-	width: 30px;
-	height: 30px;
+	width: 100%;
+	height: 32px;
 	margin-top: 10px;
 	margin-bottom: -2vh;
   }
 
-
+.redes_footer {
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+}
 
