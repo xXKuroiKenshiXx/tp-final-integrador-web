@@ -47,6 +47,14 @@
             "posicion": "arquero",
             "dorsal": 23,
             "pie": "derecho"
+        },
+        {
+            "documento": "56789012",
+            "nombre": "rully",
+            "apellido": "Martínez",
+            "posicion": "arquero",
+            "dorsal": 23,
+            "pie": "derecho"
         }
     ]
 }
