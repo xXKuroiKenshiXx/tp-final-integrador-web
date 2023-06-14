@@ -203,6 +203,7 @@ h1 {
     justify-items: center;
     animation: rebota 0.8s alternate infinite ease-out;
   }
+
     @keyframes rebota {
         0% {
         bottom: 100%;
@@ -214,9 +215,86 @@ h1 {
     }
 
 
+/*------------------PAGINA JUGADORES------------------------------ */
+#jugadoresh2{
+	text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+	font-size: 1.5em;
+	margin-left: 30px;
+}
+
+#jugador-form input[type="text"], #jugador-form select {
+  width: 250px; /* Ancho deseado para los campos de texto y select */
+  font-size: 20px; /* Tamaño de fuente deseado para los campos de texto y select */
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+#jugador-form input, #jugador-form select {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#boton-reg {
+	background-color: #1a5ddb;
+	border-color: #0c335c78;
+	color: #fff;
+	padding: 0.5rem 1.5rem;
+	margin-left: 10px;
+	font-size: 1rem;
+	border-radius: 0.25rem;
+	transition: all 0.2s ease-in-out;
+	border-radius: 30px;
+	
+  }
+#boton-reg:hover {
+	background-color: #2a9cff;
+	border-color: #130b2e89;
+	cursor: pointer;
+  }
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.tr-titulos {
+	background-color: #ccc;
+	color: #000000;
+	border-bottom: solid black 2px;
+	border-top: solid black 1px;
+
+}
+table, th, td {
+	border: 1px solid rgb(255, 255, 255);
+}
+
+th, td {
+	padding: 8px;
+}
+
+#jugadores-table td {
+	text-align: center;
+}
+
+/* Estilo para la fila agregada */
+
+/* Estilo para las filas impares */
+#jugadores-body tr.agregado:nth-child(odd) {
+	background-color: #abd4ff; /* color de fondo para filas impares */
+  }
+  
+  /* Estilo para las filas pares */
+  #jugadores-body tr.agregado:nth-child(even) {
+	background-color: #e0e0e0; /* color de fondo para filas pares */
+  }
 /*------------------------------------------------ */
-/*------------------------------------------------ */
-/*------------------------------------------------ */
+/*---------------------PAGINA CONTACTOS--------------------------- */
 /* Estilos para el contenedor de las cajas transparentes */
 .contenedor-cajas {
 	display: flex;

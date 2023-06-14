@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="..css/node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="..css/node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
-    <title>Jugadores | AFA</title>
+	<script src="/jugadores.js"></script>
+	<title>Jugadores | AFA</title>
 </head>
+
 <body>
 	<header>
 
@@ -27,30 +30,70 @@
 
 		<nav class="iconos">
 			<ul class="iconos-redes">
-				<li><a href="https://www.facebook.com/AFAOFICIAL/" class="link" target="_blank"><img src="../img/facebook.png" alt="Icono de Facebook"></a></li>
-				<li><a href="https://twitter.com/AFA" class="link" target="_blank"><img src="../img/icono-twitter.png" alt="Icono de Twitter"></a></li>
-				<li><a href="https://www.instagram.com/afa.oficial/" class="link" target="_blank"><img src="../img/instagram.png" alt="Icono de Instagram"></a></li>
+				<li><a href="https://www.facebook.com/AFAOFICIAL/" class="link" target="_blank"><img
+							src="../img/facebook.png" alt="Icono de Facebook"></a></li>
+				<li><a href="https://twitter.com/AFA" class="link" target="_blank"><img src="../img/icono-twitter.png"
+							alt="Icono de Twitter"></a></li>
+				<li><a href="https://www.instagram.com/afa.oficial/" class="link" target="_blank"><img
+							src="../img/instagram.png" alt="Icono de Instagram"></a></li>
 			</ul>
 		</nav>
 
 	</header>
 
-	<h1>Listado de Jugadores</h1>
+	<h1>Jugadores</h1>
 
-	<div class="messi">
-		<img src="../img/messi.png" alt="anda paya">
-	</div>
+	<h2 id="jugadoresh2">Registrar un jugador nuevo</h2>
 	
+	<form id="jugador-form">
+		<input type="text" id="documento" placeholder="Documento" autocomplete="off" required>
+		<input type="text" id="nombre" placeholder="Nombre" autocomplete="off" required>
+		<input type="text"  id="apellido" placeholder="Apellido" autocomplete="off" required>
+		<select id="posicion" required>
+			<option value="">Seleccionar posición</option>
+			<option value="delantero">Delantero</option>
+			<option value="defensa">Defensa</option>
+			<option value="medio campista">Medio Campista</option>
+			<option value="arquero">Arquero</option>
+		</select>
+		<input type="number" id="dorsal" placeholder="Dorsal" required>
+		<select id="pie_habil" required>
+			<option value="">Seleccionar pie hábil</option>
+			<option value="derecho">Derecho</option>
+			<option value="zurdo">Zurdo</option>
+		</select>
+		<button type="submit" id="boton-reg">Registrar</button>
+	</form>
+
+	<table id="jugadores-table">
+		<thead>
+			<tr class="tr-titulos">
+				<th>Documento</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Posición</th>
+				<th>Dorsal</th>
+				<th>Pie Hábil</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody id="jugadores-body"></tbody>
+	</table>
+
 	<footer>
 		<nav class="redes_footer">
 			<ul class="iconos_f">
-				<li><a href="https://www.facebook.com/AFAOFICIAL/" target="_blank"><img src="../img/facebook.png" alt="Icono de Facebook"></a></li>
-				<li><a href="https://twitter.com/AFA" target="_blank"><img src="../img/icono-twitter.png" alt="Icono de Twitter"></a></li>
-				<li><a href="https://www.instagram.com/afa.oficial/" target="_blank"><img src="../img/instagram.png" alt="Icono de Instagram"></a></li>
+				<li><a href="https://www.facebook.com/AFAOFICIAL/" target="_blank"><img src="../img/facebook.png"
+							alt="Icono de Facebook"></a></li>
+				<li><a href="https://twitter.com/AFA" target="_blank"><img src="../img/icono-twitter.png"
+							alt="Icono de Twitter"></a></li>
+				<li><a href="https://www.instagram.com/afa.oficial/" target="_blank"><img src="../img/instagram.png"
+							alt="Icono de Instagram"></a></li>
 			</ul>
 		</nav>
 		<p>Derechos reservados &copy; 2023</p>
-	
+
 	</footer>
 </body>
+
 </html>
