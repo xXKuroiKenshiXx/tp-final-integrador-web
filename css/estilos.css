@@ -18,8 +18,8 @@ body {
 
 header {
 	background: #44A08D;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	background: -webkit-linear-gradient(to right, #9f7417, #e7ab06);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #9f7417, #e7ab06); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	padding: 1%;
 	display: flex;
 	align-items: center;
@@ -216,23 +216,108 @@ h1 {
 
 
 /*------------------PAGINA JUGADORES------------------------------ */
-#jugadoresh2{
-	text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-	font-size: 1.5em;
-	margin-left: 30px;
+.cont-titulos-cajas{
+	display: flex;
+	justify-content: space-evenly;
+	color: rgba(255,255,255,1);
+	font-size: 18px;
 }
 
 #jugador-form input[type="text"], #jugador-form select {
+	border-radius: 5px;
   width: 250px; /* Ancho deseado para los campos de texto y select */
   font-size: 20px; /* Tamaño de fuente deseado para los campos de texto y select */
 }
 
-form {
+
+/* .registro-container {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 20px;
+	align-items: center;
+	height: 340px;
+	width:	400px;
+	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
+	opacity: 1;
+	top: 55px;
+	border: 1px solid rgba(123,123,123,1);
+	border-radius: 30px;
+	border: 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-right: 20px;
+	margin-left: 200px;
+} */
+
+.cont-cajas {
+	display: flex;
+	justify-content: space-evenly;
+	box-sizing: border-box;
+	flex-direction: row;
+  }
+
+.registro-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 340px;
+	width:	400px;
+	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
+	opacity: 1;
+	top: 55px;
+	border: 1px solid rgba(123,123,123,1);
+	border-radius: 30px;
+	border: 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+.container-buscar{
+	margin-top: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	width:	400px;
+	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
+	opacity: 1;
+	top: 55px;
+	border: 1px solid rgba(123,123,123,1);
+	border-radius: 30px;
+	border: 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.registro-container form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 10px;
+  }
+  
+.registro-container form input, .registro-container form #pie_habil {
+	width: 80%;
+	padding: 5px;
+	margin-bottom: 10px;
+  }
+
+.registro-container form button {
+	margin-left: 25%;
+	background-color: #4caf50;
+	color: #fff;
+	border: none;
+	justify-content: center;
+	width: 50%;
+	padding: 5px;
+	margin-top: 5px;
+	border-radius: 30px;
+	font-size: 1rem;
+	
+
+}
+
+.registro-container form input#dorsal {
+	width: 30%;
+	padding: 5px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 #jugador-form input, #jugador-form select {
@@ -240,32 +325,19 @@ form {
 	margin-left: 10px;
 }
 
-#boton-reg {
-	background-color: #1a5ddb;
-	border-color: #0c335c78;
-	color: #fff;
-	padding: 0.5rem 1.5rem;
-	margin-left: 10px;
-	font-size: 1rem;
-	border-radius: 0.25rem;
-	transition: all 0.2s ease-in-out;
-	border-radius: 30px;
-	
-  }
-#boton-reg:hover {
-	background-color: #2a9cff;
-	border-color: #130b2e89;
-	cursor: pointer;
-  }
+.registro-container form button:hover {
+	background-color: #45a049;
+}
 
 table {
+	margin-top: 30px;
 	width: 100%;
 	border-collapse: collapse;
 }
 
 .tr-titulos {
-	background-color: #ccc;
-	color: #000000;
+	background-color: #1773e3;
+	color: #ffffff;
 	border-bottom: solid black 2px;
 	border-top: solid black 1px;
 
@@ -326,7 +398,7 @@ th, td {
 	justify-content: center;
 }
 
-.caja-transparente {
+.caja-transparente1, .caja-transparente2, .caja-transparente3 {
 	height: 340px;
 	width:	400px;
 	background: linear-gradient(0deg, rgba(179, 179, 179, 0.3), rgba(179, 179, 179, 0.3)), rgba(41, 39, 121, 0.4);
@@ -338,13 +410,13 @@ th, td {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
+
+
     /* Estilos para el título */
 .titulo_de_las_cajas {
 	justify-content: space-between;
 	color: rgba(255,255,255,1);
 	font-size: 36px;
-	top: 0;
-	left: 0;
   }
 
 /*------------------------------------------------ */
@@ -363,9 +435,9 @@ th, td {
 	color: #fff;
 	padding: 0.5rem 1.5rem;
 	font-size: 1rem;
-	border-radius: 0.25rem;
-	transition: all 0.2s ease-in-out;
 	border-radius: 30px;
+	transition: all 0.2s ease-in-out;
+	
 	
   }
 #boton-enviar:hover {
@@ -380,7 +452,8 @@ th, td {
 	width: 30vh;
 	margin-left: 6vh;
 	margin-right: 5vh;
-	margin-top: 3vh;
+	margin-top: 1.5vh;
+	margin-bottom: 1vh;
 	padding: 4px;
 	border-radius: 10px;
 	border: 0;
@@ -557,16 +630,14 @@ footer {
 	bottom: 0;
 	height: 14vh;
 	background: #44A08D;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: -webkit-linear-gradient(to right, #9f7417, #e7ab06);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #9f7417, #e7ab06); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	text-align: center;
 }
 
 .footer-contenido{
 	position: relative;
 }
-
-
 
 .p-index-html {
 	display: flex;
