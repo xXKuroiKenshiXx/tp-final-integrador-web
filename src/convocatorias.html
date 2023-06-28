@@ -1,55 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<title>APP Scaloneta|Convocatorias</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+	
+	<!-- css/normalize/boostrap/boostrapicons -->
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
-    <title>Convocatorias | AFA</title>
+	<link href="../css/node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../css/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="../css/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" type="text/css">
+
+	<!-- fuentes -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+
+	<!-- javascript -->
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="../js/jugadores.js"></script>
+
 </head>
 <body>
-	<header>
+	<header class="text-transform-uppercase">
+		<nav class="navbar navbar-expand-lg navbar-custom">
+			<div class="container d-flex justify-content-between align-items-center">
+				<div class="navbar-collapse">
+					<a class="navbar-brand" href="../index.html">
+						<img src="/img/afa logo.png" alt="Logo AFA" style="height: 4hmax; width: 4vmax;">
+					</a>
+					<ul class="navbar-nav ml-auto d-flex align-items-center">
+						<li class="nav-item"><a class="nav-link link" href="../index.html">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link link" href="../src/jugadores.html">Jugadores</a></li>
+						<li class="nav-item"><a class="nav-link link" href="../src/convocatorias.html">Convocatorias</a></li>
+						<li class="nav-item"><a class="nav-link link" href="../src/11inicial.html">11 inicial</a></li>
+						<li class="nav-item"><a class="nav-link link" href="../src/contacto.html">Contacto</a></li>
+						<li class="nav-item"><a class="nav-link link" href="../src/institucional.html">Institucional</a></li>
+					</ul>
+				</div>
+				<ul class="navbar-nav ml-auto d-flex align-items-center">
+					<li class="nav-item">
+						<a class="nav-link link" href="https://www.facebook.com/AFAOFICIAL/" class="link" target="_blank">
+							<i class="bi bi-facebook" style="font-size: 31px; height: 30px; width: 20px;"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link link" href="https://twitter.com/AFA" class="link" target="_blank">
+							<i class="bi bi-twitter" style="font-size: 31px; height: 30px; width: 20px;"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link link" href="https://www.instagram.com/afa.oficial/" class="link" target="_blank">
+							<i class="bi bi-instagram" style="font-size: 31px; height: 30px; width: 20px; padding: 2px;"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	
 
-		<div class="logo">
-			<a href="../index.html"><img src="../img/afa logo.png" alt="Logo AFA"></a>
+
+	<div id="caja-convocatoria">
+		<div class="form-logo">
+			<img src="/img/afa logo.png" width="60px" alt="Logo AFA">
 		</div>
 
-		<nav class="botonera">
-			<ul class="botones">
-				<li><a href="../index.html" class="link">Inicio</a></li>
-				<li><a href="../src/jugadores.html" class="link">Jugadores</a></li>
-				<li><a href="../src/convocatorias.html" class="link">Convocatorias</a></li>
-				<li><a href="../src/contacto.html" class="link">Contacto</a></li>
-				<li><a href="../src/institucional.html" class="link">Institucional</a></li>
-			</ul>
-		</nav>
+		<br>
 
-		<nav class="iconos">
-			<ul class="iconos-redes">
-				<li><a href="https://www.facebook.com/AFAOFICIAL/" class="link" target="_blank"><img src="../img/facebook.png" alt="Icono de Facebook"></a></li>
-				<li><a href="https://twitter.com/AFA" class="link" target="_blank"><img src="../img/icono-twitter.png" alt="Icono de Twitter"></a></li>
-				<li><a href="https://www.instagram.com/afa.oficial/" class="link" target="_blank"><img src="../img/instagram.png" alt="Icono de Instagram"></a></li>
-			</ul>
-		</nav>
+		<form>
+			<h2 class="form-title">CONVOCATORIA</h2>
 
-	</header>
+			<div class="form-input">
+				<label for="fecha">Fecha del partido:</label>
+				<input type="date" id="fecha" name="fecha" required>
+			</div>
+		
+			<div class="form-input">
+				<label for="rival">Equipo Rival:</label>
+				<input type="text" id="rival" name="rival" Maxlength="40" autocomplete="off" required>
+				<div id="horario-error" class="error-message"></div>
+			</div>
 
-	<h1>Fechas de Convocatorias</h1>
-	<div class="messi">
-		<img src="../img/messi.png" alt="anda paya">
+			<div class="form-input">
+				<label for="horario">Horario del partido:</label>
+				<input type="text" id="horario" name="horario" placeholder="XX:XX" maxlength="5" minlength="4" autocomplete="off" required>
+			</div>
+
+			<div class="form-boton">
+				<button type="submit" id="guardar-convocatoria-btn">Guardar convocatoria</button>
+			</div>
+	
+		</form>
 	</div>
-	
-	<footer>
-		<nav class="redes_footer">
-			<ul class="iconos_f">
-				<li><a href="https://www.facebook.com/AFAOFICIAL/" target="_blank"><img src="../img/facebook.png" alt="Icono de Facebook"></a></li>
-				<li><a href="https://twitter.com/AFA" target="_blank"><img src="../img/icono-twitter.png" alt="Icono de Twitter"></a></li>
-				<li><a href="https://www.instagram.com/afa.oficial/" target="_blank"><img src="../img/instagram.png" alt="Icono de Instagram"></a></li>
+
+	<div class="container-filtro-fechas">
+		<form id="filtro-convocatorias">
+			<label for="fecha-inicio">Desde:</label>
+			<input type="date" id="fecha-inicio" name="fecha-inicio">
+			<br>
+			<label for="fecha-fin">Hasta:</label>
+			<input type="date" id="fecha-fin" name="fecha-fin">
+		
+			<button type="submit">Filtrar</button>
+		</form>
+	</div>
+
+	<div class="container-tabla">
+		<table id="convocatorias-table">
+			<thead>
+				<tr class="tr-titulos">
+					<th>ID</th>
+					<th>Fecha</th>
+					<th>hora</th>
+					<th>Rival</th>
+					<th>Capitan</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody id="convocatorias-body"></tbody>
+		</table>
+	</div>
+
+	<div id="cuadro-emergente" style="display: none;">
+		<ul id="lista-jugadores">
+		  <!-- Aca se van a agregar los jugadores cuando se haga click en convocar -->
+		</ul>
+	  </div>
+
+
+
+
+	<footer class="py-3 text-white navbar-custom" style="padding: 2vh; padding-right: 2vh; margin-top: 10vw; width: 100%;">
+		<div class="row">
+			
+		<div class="col-6 col-md-2 mb-3">
+				<h5 class="text-black" style="padding: 1vh" >Sección</h5>
+				<ul class="nav flex-column">
+				  <li class="nav-item mb-2"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+				  <li class="nav-item mb-2"><a href="../src/jugadores.html" class="nav-link text-white">Jugadores</a></li>
+				  <li class="nav-item mb-2"><a href="../src/convocatorias.html" class="nav-link text-white">Convocatorias</a></li>
+				  <li class="nav-item mb-2"><a href="../src/contacto.html" class="nav-link text-white">Contacto</a></li>
+				  <li class="nav-item mb-2"><a href="../src/institucional.html" class="nav-link text-white">Institucional</a></li>
+				</ul>
+			</div>
+	  
+		  <div class="col-6 col-md-2 mb-3">
+			<h5 class="text-black">Redes Sociales</h5>
+			<ul class="nav flex-column">
+			  <li class="nav-item mb-2"><a href="https://www.facebook.com/AFAOFICIAL/" target="_blank" class="nav-link p-0 text-white">Facebook</a></li>
+			  <li class="nav-item mb-2"><a href="https://www.twitter.com/AFA" target="_blank" class="nav-link p-0 text-white">Twitter</a></li>
+			  <li class="nav-item mb-2"><a href="https://www.instagram.com/afa.oficial/" target="_blank" class="nav-link p-0 text-white">Instagram</a></li>
 			</ul>
-		</nav>
-		<p>Derechos reservados &copy; 2023</p>
-	
-	</footer>
+		  </div>
+	  
+		  <div class="col-md-5 offset-md-1 mb-3">
+			<form>
+			  <h5>Subscríbete a nuestro boletín</h5>
+			  <p class="text-black">Resumen mensual de las novedades y emociones.</p>
+			  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+				<label for="newsletter1" class="visually-hidden">Dirección de correo electrónico</label>
+				<input id="newsletter1" type="text" class="form-control" placeholder="Dirección de correo electrónico">
+				<button class="btn btn-primary" type="button">Subscribirse</button>
+			  </div>
+			</form>
+		  </div>
+		</div>
+	  
+		<div class="d-flex flex-column flex-sm-row justify-content-center   border-top">
+		  <p>&copy; 2023 AFA. Todos los derechos reservados.</p>
+		</div>
+	  </footer>
+
+	  <script src="../js/convocatorias.js"></script>
+
 </body>
 </html>

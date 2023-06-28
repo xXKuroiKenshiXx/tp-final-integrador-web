@@ -1,59 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-	
+<head>	
 	<title>Mi página de fútbol</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="./css/node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+	
+	<!-- css/normalize/boostrap/boostrapicons -->
 	<link rel="stylesheet" type="text/css" href="./css/estilos.css">
+	<link href="./css/node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="./css/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="./css/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" type="text/css">
+
+	<!-- fuentes -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
-	<script src="/js/index.js"></script>
+
+	<!-- javascript -->
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="../js/jugadores.js"></script>
+	
 
 </head>
+
+
 <body>
 
-	<header>
-	
-		<div class="logo">
-			<a href="index.html"><img src="img/afa logo.png" alt="Logo AFA"></a>
-		</div>
-
-		<nav class="botonera">
-			<ul class="botones">
-				<li><a href="index.html" class="link">Inicio</a></li>
-				<li><a href="src/jugadores.html" class="link">Jugadores</a></li>
-				<li><a href="src/convocatorias.html" class="link">Convocatorias</a></li>
-				<li><a href="src/contacto.html" class="link">Contacto</a></li>
-				<li><a href="src/institucional.html" class="link">Institucional</a></li>
-			</ul>
+	<header class="text-transform-uppercase" >
+		<nav class="navbar navbar-expand-lg navbar-custom">
+			<div class="container d-flex justify-content-between align-items-center">
+				<div class="navbar-collapse">
+					<a class="navbar-brand" href="/index.html">
+						<img src="/img/afa logo.png" alt="Logo AFA" style="height: 4hmax; width: 4vmax;">
+					</a>
+					<ul class="navbar-nav ml-auto d-flex align-items-center">
+						<li class="nav-item"><a class="nav-link link" href="./index.html">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link link" href="./src/jugadores.html">Jugadores</a></li>
+						<li class="nav-item"><a class="nav-link link" href="./src/convocatorias.html">Convocatorias</a></li>
+						<li class="nav-item"><a class="nav-link link" href="./src/11inicial.html">11 inicial</a></li>
+						<li class="nav-item"><a class="nav-link link" href="./src/contacto.html">Contacto</a></li>
+						<li class="nav-item"><a class="nav-link link" href="./src/institucional.html">Institucional</a></li>
+					</ul>
+				</div>
+				<ul class="navbar-nav ml-auto d-flex align-items-center">
+					<li class="nav-item">
+						<a class="nav-link link" href="https://www.facebook.com/AFAOFICIAL/" class="link" target="_blank">
+							<i class="bi bi-facebook" style="font-size: 31px; height: 30px; width: 20px;"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link link" href="https://twitter.com/AFA" class="link" target="_blank">
+							<i class="bi bi-twitter" style="font-size: 31px; height: 30px; width: 20px;"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link link" href="https://www.instagram.com/afa.oficial/" class="link" target="_blank">
+							<i class="bi bi-instagram" style="font-size: 31px; height: 30px; width: 20px; padding: 2px;"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
-
-		<nav class="iconos">
-			<ul class="iconos-redes">
-				<li><a href="https://www.facebook.com/AFAOFICIAL/" class="link" target="_blank"><img src="img/facebook.png" alt="Icono de Facebook"></a></li>
-				<li><a href="https://twitter.com/AFA" class="link" target="_blank"><img src="img/icono-twitter.png" alt="Icono de Twitter"></a></li>
-				<li><a href="https://www.instagram.com/afa.oficial/" class="link" target="_blank"><img src="img/instagram.png" alt="Icono de Instagram"></a></li>
-			</ul>
-		</nav>
-
 	</header>
 
-	<div class="container-banner">
-		<img src="img/argentina-campeon-mundial-2022.jpg" alt="Seleccion Argentina levantando la copa">
-		<h1 class="texto-grande">
-			<span style='--content: "APP"' class="app">APP</span>
-			<br>
-			<span style='--content: "SCALONETA"' class="scaloneta">SCALONETA</span>
-		</h1>
-		<div class="overlay"></div>
-	</div>
-	<br>
-	<br>
-	
-	<p class="p-index-html">
+
+	<div class="parallax-container">
+		<div class="parallax-overlay"></div>
+		<img src="img/imagen-home1.jpg" alt="seleccion" class="parallax-image">
+	  </div>
+
+	  <div class="divider"></div>
+
+	 
+
+	<p class="p-index-html text-white ">
 		¡Bienvenidos a la nueva aplicación de la AFA! En este espacio podrás encontrar todo lo relacionado con la Selección Argentina de fútbol y su cuerpo técnico.
 		<br>
 		Te invitamos a conocer nuestra nueva aplicación Web, desarrollada en colaboración con expertos en tecnología. Esta herramienta única en su tipo permitirá al cuerpo técnico de la Selección Argentina llevar a cabo de manera eficiente la convocatoria de jugadores y la creación del 11 inicial para cada partido.
@@ -63,21 +86,56 @@
 		¡Únete a nuestra comunidad y no te pierdas ningún detalle de la Selección Argentina!
 	</p>
 
-	
-	<footer class="footer-contenido">
-		<nav class="redes_footer">
-			<ul class="iconos_f">
-				<li><a href="https://www.facebook.com/AFAOFICIAL/" target="_blank"><img src="img/facebook.png" alt="Icono de Facebook"></a></li>
-				<li><a href="https://twitter.com/AFA" target="_blank"><img src="img/icono-twitter.png" alt="Icono de Twitter"></a></li>
-				<li><a href="https://www.instagram.com/afa.oficial/" target="_blank"><img src="img/instagram.png" alt="Icono de Instagram"></a></li>
+	<div class="divider"></div>
+		<div class="container justify-content-center">
+		<img class="afa-youtube"  src="img/unnamed.png" alt="afa-youtube"  style=" height: 300px; width: 300px; padding: 2px;">
+		</div>
+		<h2 class="p-index-html text-white text-transform-uppercase ">Síguenos en YouTube para más contenido como este</h2>
+		<div class=" container justify-content-center">
+			<iframe id="youtube" width="760" height="480"  src="https://www.youtube.com/embed/HlP2ains6vg" frameborder="0" allowfullscreen></iframe>
+		</div>
+
+
+
+	</html>
+	<footer class="py-3 text-white navbar-custom" style="padding: 2vh; padding-right: 2vh; margin-top: 10vw; position: absolute; width: 100%;">
+		<div class="row">
+			
+		<div class="col-6 col-md-2 mb-3">
+				<h5 class="text-black" style="padding: 1vh" >Sección</h5>
+				<ul class="nav flex-column">
+				  <li class="nav-item mb-2"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+				  <li class="nav-item mb-2"><a href="../src/jugadores.html" class="nav-link text-white">Jugadores</a></li>
+				  <li class="nav-item mb-2"><a href="../src/convocatorias.html" class="nav-link text-white">Convocatorias</a></li>
+				  <li class="nav-item mb-2"><a href="../src/contacto.html" class="nav-link text-white">Contacto</a></li>
+				  <li class="nav-item mb-2"><a href="../src/institucional.html" class="nav-link text-white">Institucional</a></li>
+				  <li class="nav-item mb-2"><a href="../src/11inicial.html" class="nav-link text-white">Equipo titular</a></li>
+				</ul>
+			</div>
+	  
+		  <div class="col-6 col-md-2 mb-3">
+			<h5 class="text-black">Redes Sociales</h5>
+			<ul class="nav flex-column">
+			  <li class="nav-item mb-2"><a href="https://www.facebook.com/AFAOFICIAL/" target="_blank" class="nav-link p-0 text-white">Facebook</a></li>
+			  <li class="nav-item mb-2"><a href="https://www.twitter.com/AFA" target="_blank" class="nav-link p-0 text-white">Twitter</a></li>
+			  <li class="nav-item mb-2"><a href="https://www.instagram.com/afa.oficial/" target="_blank" class="nav-link p-0 text-white">Instagram</a></li>
 			</ul>
-		</nav>
-		<p>Derechos reservados &copy; 2023</p>
-		<img src="https://www.tenvinilo.com/vinilos-decorativos/img/preview/vinilo-infantil-pelota-futbol-color-1399.png" width="100" height="100" id="pelota1">
-		<img src="https://www.tenvinilo.com/vinilos-decorativos/img/preview/vinilo-infantil-pelota-futbol-color-1399.png" width="100" height="100" id="pelota2">
-
-	</footer>
-
-</body>
-</html>
-
+		  </div>
+	  
+		  <div class="col-md-5 offset-md-1 mb-3">
+			<form>
+			  <h5>Subscríbete a nuestro boletín</h5>
+			  <p class="text-black">Resumen mensual de las novedades y emociones.</p>
+			  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+				<label for="newsletter1" class="visually-hidden">Dirección de correo electrónico</label>
+				<input id="newsletter1" type="text" class="form-control" placeholder="Dirección de correo electrónico">
+				<button class="btn btn-primary" type="button">Subscribirse</button>
+			  </div>
+			</form>
+		  </div>
+		</div>
+	  
+		<div class="d-flex flex-column flex-sm-row justify-content-center   border-top">
+		  <p>&copy; 2023 AFA. Todos los derechos reservados.</p>
+		</div>
+	  </footer>
