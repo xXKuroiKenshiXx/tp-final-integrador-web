@@ -245,7 +245,7 @@ h1 {
 #jugador-form input[type="text"], #jugador-form select {
 	border-radius: 5px;
   	width: 250px; /* Ancho deseado para los campos de texto y select */
-  	font-size: 20px; /* Tamaño de fuente deseado para los campos de texto y select */
+  	font-size: 15px; /* Tamaño de fuente deseado para los campos de texto y select */
 }
 
 
@@ -289,8 +289,8 @@ h1 {
 }
 
 #buscar-nombre-input, #buscar-apellido-input, #buscar-posicion-select {
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	border-radius: 5px;
 	width: 16rem;
 	font-size: 20px;
@@ -300,8 +300,8 @@ h1 {
 #buscar-dorsal-input {
 	width: 9rem;
 	font-size: 1rem;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 #buscar-jugadores-btn {
@@ -311,11 +311,15 @@ h1 {
 	justify-content: center;
 	width: 50%;
 	padding: 5px;
-	margin-top: 3rem;
+	margin-top: 15px;
 	border-radius: 30px;
 	font-size: 1rem;
 	
 	}
+
+#buscar-jugadores-btn:hover {
+	background-color: #45a049;
+}
 
 .registro-container form {
 	display: flex;
@@ -364,8 +368,8 @@ h1 {
 	width: 30%;
 	padding: 5px;
 	margin-bottom: 10px;
-	margin-top: 5px;
-	font-size: 1rem;
+	margin-top: 10px;
+	font-size: 15px;
 }
 
 #jugador-form input, #jugador-form select  {

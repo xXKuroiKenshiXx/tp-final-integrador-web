@@ -104,12 +104,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Obtener los jugadores existentes almacenados en localStorage
     const jugadores = obtenerJugadores();
 
-    // Agregar el nuevo jugador al arreglo de jugadores si no existe
+    // Agregar el nuevo jugador al array de jugadores si no existe
     const documentoExistente = jugadores.find((jugadorExistente) => jugadorExistente.documento === jugador.documento);
     if (documentoExistente) {
       return;
     }
-    // Agregar el nuevo jugador al arreglo de jugadores si no existe
+    // Agregar el nuevo jugador al array de jugadores si no existe
     const dorsalExistente = jugadores.find((jugadorExistente) => jugadorExistente.dorsal === jugador.dorsal);
     if (dorsalExistente) {
       return;
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     jugadores.push(jugador);
 
-    // Guardar el arreglo de jugadores actualizado en localStorage
+    // Guardar el array de jugadores actualizado en localStorage
     localStorage.setItem("jugadores", JSON.stringify(jugadores));
   }
 
@@ -146,14 +146,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // Obtener los jugadores almacenados en localStorage
     const jugadoresString = localStorage.getItem("jugadores");
     jugadores = jugadoresString ? JSON.parse(jugadoresString) : [];
-
+  
     // Limpiar el cuerpo de la tabla de jugadores
     while (jugadoresBody.firstChild) {
       jugadoresBody.firstChild.remove();
     }
-
-    // Recorrer los jugadores y crear filas en la tabla
-    jugadores.forEach(function(jugador, index) {
+  
+    // Filtrar los jugadores en función de los criterios de búsqueda
+    const nombre = document.getElementById('buscar-nombre-input').value.trim();
+    const apellido = document.getElementById('buscar-apellido-input').value.trim();
+    const posicion = document.getElementById('buscar-posicion-select').value;
+    const dorsal = document.getElementById('buscar-dorsal-input').value.trim();
+  
+    const jugadoresFiltrados = jugadores.filter(function(jugador) {
+      return (
+        (nombre === '' || jugador.nombre.includes(nombre)) &&
+        (apellido === '' || jugador.apellido.includes(apellido)) &&
+        (posicion === '' || jugador.posicion === posicion) &&
+        (dorsal === '' || jugador.dorsal === dorsal)
+      );
+    });
+  
+    // Recorrer los jugadores filtrados y crear filas en la tabla
+    jugadoresFiltrados.forEach(function(jugador, index) {
       const fila = document.createElement("tr");
       const celdaNumero = document.createElement("td");
       const celdaDocumento = document.createElement("td");
@@ -165,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const celdaBotones = document.createElement("td");
       const editarButton = document.createElement("button");
       const eliminarButton = document.createElement("button");
-
+  
       celdaNumero.textContent = index + 1;
       celdaDocumento.textContent = jugador.documento;
       celdaNombre.textContent = jugador.nombre;
@@ -173,18 +188,18 @@ document.addEventListener("DOMContentLoaded", function() {
       celdaPosicion.textContent = jugador.posicion;
       celdaDorsal.textContent = jugador.dorsal;
       celdaPieHabil.textContent = jugador.pieHabil;
-
+  
       editarButton.textContent = "Editar";
       editarButton.classList.add("editar-btn");
       editarButton.setAttribute("data-documento", jugador.documento);
-
+  
       eliminarButton.textContent = "Eliminar";
       eliminarButton.classList.add("eliminar-btn");
       eliminarButton.setAttribute("data-documento", jugador.documento);
-
+  
       celdaBotones.appendChild(editarButton);
       celdaBotones.appendChild(eliminarButton);
-
+  
       fila.appendChild(celdaNumero);
       fila.appendChild(celdaDocumento);
       fila.appendChild(celdaNombre);
@@ -193,15 +208,30 @@ document.addEventListener("DOMContentLoaded", function() {
       fila.appendChild(celdaDorsal);
       fila.appendChild(celdaPieHabil);
       fila.appendChild(celdaBotones);
-
+  
       jugadoresBody.appendChild(fila);
-
+  
       fila.classList.add("agregado");
 
       // Agregar event listeners a los botones de editar y eliminar
       agregarEventListeners();
     });
   }
+
+    // Obtener referencia al botón "Limpiar Filtros"
+  const limpiarFiltrosBtn = document.getElementById("limpiar-filtros-btn");
+  
+  // Agregar event listener al botón "Limpiar Filtros"
+  limpiarFiltrosBtn.addEventListener("click", function() {
+    // Limpiar los valores de los campos de búsqueda
+    document.getElementById('buscar-nombre-input').value = '';
+    document.getElementById('buscar-apellido-input').value = '';
+    document.getElementById('buscar-posicion-select').value = '';
+    document.getElementById('buscar-dorsal-input').value = '';
+  
+    // Volver a cargar todos los jugadores
+    cargarTodosLosJugadores();
+  });
 
   function editarJugador(documento) {
     // Obtener los jugadores almacenados en localStorage
@@ -220,11 +250,11 @@ document.addEventListener("DOMContentLoaded", function() {
     dorsalInput.value = jugador.dorsal;
     pieHabilSelect.value = jugador.pieHabil;
 
-    // Eliminar el jugador del arreglo de jugadores
+    // Eliminar el jugador del array de jugadores
     const index = jugadores.indexOf(jugador);
     jugadores.splice(index, 1);
 
-    // Guardar el arreglo de jugadores actualizado en localStorage
+    // Guardar el array de jugadores actualizado en localStorage
     localStorage.setItem("jugadores", JSON.stringify(jugadores));
 
     // Actualizar la tabla de jugadores
@@ -235,12 +265,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Obtener los jugadores almacenados en localStorage
     const jugadores = obtenerJugadores();
 
-    // Filtrar el arreglo de jugadores para eliminar el jugador correspondiente al documento proporcionado
+    // Filtrar el array de jugadores para eliminar el jugador correspondiente al documento proporcionado
     const jugadoresFiltrados = jugadores.filter(function(jugador) {
       return jugador.documento !== documento;
     });
 
-    // Guardar el arreglo de jugadores filtrado en localStorage
+    // Guardar el array de jugadores filtrado en localStorage
     localStorage.setItem("jugadores", JSON.stringify(jugadoresFiltrados));
     // Actualizar la tabla de jugadores
     cargarTodosLosJugadores();
@@ -268,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Mostrar los jugadores filtrados en la tabla
-    cargarJugadores(jugadoresFiltrados);
+    cargarTodosLosJugadores(jugadoresFiltrados);
 
     // Agregar event listeners a los botones de editar y eliminar
     agregarEventListeners();
